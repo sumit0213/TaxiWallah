@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver's Page</title>
+  <!-- Add Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <!-- Add Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_OF-GCSb49quE1Jbs9vA7_cotXjQaPpk&callback=initMap" async defer></script>
+  <!-- Add your Firebase configuration -->
+  <!-- <script src="firebase-config.js"></script> -->
+  <!-- Add your main script -->
+  <script src="main.js"></script>
+  <!-- Add some basic styling for the map container -->
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Driver's Page</h1>
+  <div id="map"></div>
+  <p id="currentLocation">Current Location: Loading...</p>
+  <div id="rideInfo"></div>
+</body>
+</html>
