@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Proximity Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Location Proximity Checker</h1>
+
+    <label for="location1">Current Location:</label>
+    <input type="text" id="location1" placeholder="Type location..." autocomplete="off">
+
+    <label for="location2">Enter Second Location:</label>
+    <input type="text" id="location2" placeholder="Type location..." autocomplete="off">
+
+    <div class="map-container" id="map"></div>
+
+    <div class="transportation-buttons">
+        <button class="transportation-button" onclick="calculatePrice('CAR')">Calculate Price for CAR</button>
+        <button class="transportation-button" onclick="calculatePrice('SUV')">Calculate Price for SUV</button>
+        <button class="transportation-button" onclick="calculatePrice('BIKE')">Calculate Price for BIKE</button>
+        <button class="transportation-button" onclick="calculatePrice('INTER CITY')">Calculate Price for INTER CITY</button>
+    </div>
+
+    <div class="result-container" id="result"></div> 
+
+    <!-- New input field below transportation buttons -->
+    <label for="expected-fare">Expected Fare:</label>
+    <input type="text" id="expected-fare" placeholder="Enter expected fare..." autocomplete="off">
+
+    <button id="find-driver-button" onclick="checkExpectedFare()">Find Driver</button>
+
+
+    <!-- <button onclick="checkExpectedFare()">Find Driver</button> -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_OF-GCSb49quE1Jbs9vA7_cotXjQaPpk&libraries=places&callback=initMap" async defer></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

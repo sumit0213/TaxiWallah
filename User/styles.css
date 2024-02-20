@@ -1,0 +1,36 @@
+.result-container {
+    margin-top: 10px;
+}
+
+.map-container {
+    width: 50%; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    margin-top: 10px;
+}
+
+.transportation-buttons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.transportation-button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.highlighted {
+    background-color: yellow;
+    /* You can customize other styles as needed */
+}
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,28 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drivers Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Drivers Page</h1>
+    <!-- <button onclick="getRide()">Get Ride</button> -->
+    <input type="checkbox" id="rideToggle" onchange="toggleRide()">
+    <label for="rideToggle">Toggle Ride</label>
+    <label for="desiredLocation">Desired Location:</label>
+    <input type="text" id="desiredLocation" placeholder="Enter your desired location">
+
+
+    <div id="map"></div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="config.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_OF-GCSb49quE1Jbs9vA7_cotXjQaPpk&callback=initMap" async defer></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
