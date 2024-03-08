@@ -1,36 +1,159 @@
-.result-container {
-    margin-top: 10px;
+/* Common styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-.map-container {
-    width: 50%; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
-    margin-top: 10px;
+/* Header styles */
+h1 {
+    font-family: 'Roboto', sans-serif; /* Choose an appropriate font family */
+    font-size: 36px;
+    color: #3498db; /* Choose a color for the text */
+    text-align: center; /* Center-align the text */
+    margin-bottom: 20px; /* Add some space below the header */
+    text-shadow: 2px 2px 4px rgba(52, 152, 219, 0.3); /* Add a subtle text shadow */
 }
 
-.transportation-buttons {
+/* Form container styles */
+.form-container {
     display: flex;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    background-color: #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
 }
 
+
+.form-container:hover {
+    background-color: #267bb6;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Location input styles */
+label {
+    flex-basis: 100%;       
+    margin-bottom: 1px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Outlined text field styles */
+input[type="text"] {
+    width: calc(100% - 22px); /* Adjust the width as needed */
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #3498db; /* Border color */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease; /* Add transition effect on border color */
+}
+/* Placeholder styles */
+::placeholder {
+    color: #999;
+}
+
+/* Map container styles */
+.map-container {
+    flex-basis: 100%;
+    height: 300px;
+    margin-top: 20px;
+    border: 2px solid #4f4b4b;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Transportation buttons container styles */
+.transportation-buttons {
+    flex-basis: 48%; /* Adjust as needed */
+    display: flex;
+    margin-top: 20px;
+}
+
+/* Transportation button styles */
 .transportation-button {
-    margin-right: 10px;
+    padding: 8px; /* Adjusted padding for the icon */
+    margin-right: 15px;
     cursor: pointer;
-}
-.highlighted {
-    background-color: yellow;
-    /* You can customize other styles as needed */
-}
-.spinner {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
+    background-color: transparent; /* Removed background color */
+    color: #3498db; /* Set the color for the icon */
+    border: none; /* Removed border */
+    border-radius: 3px;
+    box-shadow: none; /* Removed box shadow */
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* Hover effect to change icon color */
+.transportation-button:hover {
+    color: #267bb6; /* Change color on hover */
+    transform: translateY(-2px);
+}
+
+/* Add a style for the selected button */
+.transportation-button.selected {
+    background-color: #267bb6;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Result container styles */
+.result-container {
+    flex-basis: 48%; /* Adjust as needed */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Added space at the bottom */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    /* Center-align text content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Additional style for individual result values if needed */
+.result-value {
+    /* Add specific styles for result values here */
+    display: block;
+    margin-bottom: 10px; /* Adjust spacing between values */
+}
+/* Expected Fare input and button styles */
+#expected-fare {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    width: 60%; /* Adjust width as needed */
+}
+
+#find-driver-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: 1px solid #3498db;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+#find-driver-button:hover {
+    background-color: #267bb6;
+}
+@keyframes textAnimation {
+    0% { color: #4CAF50; }
+    50% { color: #FFC107; }
+    100% { color: #4CAF50; }
 }
